@@ -322,7 +322,7 @@
     {{ 'jquery.flexslider-min.js' | asset_url | script_tag }}
   {% endif %}
   {% if settings.enable_product_image_zoom %}
-    {{ 'jquery.zoom.js' | asset_url | script_tag }}
+    {{ 'jquery.zoom.min.js' | asset_url | script_tag }}
   {% else %}
     {{ 'jquery.fancybox.js' | asset_url | script_tag }}
     {{ 'jquery.touch.min.js' | asset_url | script_tag }}
