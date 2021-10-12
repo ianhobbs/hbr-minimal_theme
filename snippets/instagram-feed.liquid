@@ -1,0 +1,42 @@
+{% comment %}
+
+Module to add an instagram Feed to a page.
+Copyright (c) 2015 Ian Hobbs (codey.com.au)
+Dual licensed under the MIT and GPL licenses:
+http://www.opensource.org/licenses/mit-license.php
+http://www.gnu.org/licenses/gpl.html
+
+requires "instafeed.min.js"
+
+by  http://instafeedjs.com/#standard
+
+{% endcomment %}
+
+<script type="text/javascript">
+
+var myNumber = 2;
+var viewPortWidth = window.innerWidth;
+console.log(viewPortWidth);
+
+
+if (viewPortWidth <= 1026) {
+   	myNumber = 2;
+	} else if (viewPortWidth <= 509) {
+   	myNumber += 4;
+	} else{
+	myNumber += 2;	
+	}
+
+  	var userFeed = new Instafeed({
+	 	get: 'user',
+		limit: myNumber,
+		resolution: "thumbnail",
+        clientId: '4ad2312d786142309f61bc82f7ed4c0b',
+	 	userId: 196124197,
+        clientSecret: '4ad2312d786142309f61bc82f7ed4c0b',
+	 	accessToken: '196124197.1677ed0.608fd4bbee5249bb990e3194e95f6eff',
+ 		template: '{{ instafeed_template }}'
+});
+	userFeed.run();
+
+</script>

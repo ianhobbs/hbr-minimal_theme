@@ -1,0 +1,31 @@
+{% comment %}
+  This snippet renders meta data needed to create a Twitter card
+  for products and articles.
+
+  Your cards must be approved by Twitter to be activated
+    - https://dev.twitter.com/docs/cards/validation/validator
+
+  More information:
+   - https://dev.twitter.com/docs/cards/types/summary-card
+{% endcomment %}
+
+<meta name="twitter:card" content="summary" />
+{% unless settings.twittercard_handle == blank %}
+  <meta name="twitter:site" content="{{ settings.twittercard_handle }}" />
+{% endunless %}
+{% if template contains 'product' %}
+  <meta name="twitter:title" content="{{ product.title | strip_html | escape }}" />
+  <meta name="twitter:description" content="{{ product.description | strip_html | strip_newlines | truncate: 190, '...' | escape }}" />
+  <meta name="twitter:image" content="http:{{ product | img_url: 'medium' }}" />
+{% elsif template contains 'article' %}
+  <meta name="twitter:title" content="{{ article.title | strip_html | escape }}" />
+  <meta name="twitter:description" content="{{ article.excerpt_or_content | strip_html | truncate: 190, '...' | escape }}" />
+  {% assign img_tag = '<' | append: 'img' %}
+  {% if article.content contains img_tag %}
+    {% assign src = article.content | split: 'src="' %}
+    {% assign src = src[1] | split: '"' | first | remove: 'https:' | remove: 'http:' %}
+    {% if src %}
+    <meta property="twitter:image" content="https:{{ src }}" />
+    {% endif %}
+ {% endif %}
+{% endif %}

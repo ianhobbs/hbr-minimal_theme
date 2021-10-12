@@ -1,0 +1,39 @@
+{% paginate blog.articles by settings.pagination_limit %}
+
+<div id="blog">
+
+{% comment %}  <div class="row title">
+    <div class="span12">
+      <h1>{{ blog.title }}</h1>
+    </div>
+  </div> {% endcomment %}
+
+  <!-- title off -->
+
+  <!-- Begin content -->
+  <div class="row">
+    <div class="span12 articles">
+      {% for article in blog.articles %}
+      <div class="article">
+        
+
+        <!-- Adding featured image here -->
+
+        <img src="{{ article | img_url: 'medium' }}" class="article_image" alt="{{ article.image.alt }}" >
+
+        {{ article.excerpt_or_content }}
+
+      </div>
+      <hr class="divider" />
+      {% endfor %}
+    </div>
+
+    
+
+  </div>
+  <!-- End content -->
+
+</div>
+
+{% include 'pagination' %}
+{% endpaginate %}

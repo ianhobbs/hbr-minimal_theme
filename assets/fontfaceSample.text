@@ -1,0 +1,9 @@
+@font-face {
+  font-family: 'Requiem Fine-HTF';
+  src: url('{{ "RequiemFine-HTF-Roman.eot" | asset_url }}');
+  src: url('{{ "RequiemFine-HTF-Roman.eot" | asset_url }}#iefix') format("embedded-opentype"),
+       url('{{ "RequiemFine-HTF-Roman.woff" | asset_url }}') format("woff"),
+       url('{{ "RequiemFine-HTF-Roman.ttf" | asset_url }}') format("truetype"),
+       url('{{ "RequiemFine-HTF-Roman.svg" | asset_url }}') format("svg");
+  font-style: normal;
+}

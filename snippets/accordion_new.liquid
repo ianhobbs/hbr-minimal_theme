@@ -1,0 +1,119 @@
+{% comment %}
+Module to add a jQuery Accordion to a page.
+Copyright (c) 2015 Ian Hobbs (codey.com.au)
+Dual licensed under the MIT and GPL licenses:
+http://www.opensource.org/licenses/mit-license.php
+http://www.gnu.org/licenses/gpl.html
+{% endcomment %}
+<script type="text/javascript" src="{{ 'jquery_accordion.js' | asset_url }}"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+  $('.accordion').accordion({
+  cookieName: 'accordion_nav'
+  });
+});
+</script>
+<style>
+    .accordion {
+    margin: 0;
+    padding:10px 10px 10px 0;
+    border-top:#f0f0f0 1px solid;
+    background: white;
+    text-decoration: none;
+    color: rgb(57, 54, 59);
+    position:relative;
+    }
+    .accordion-open {
+    background: white;
+    color: rgb(57, 54, 59);
+    }
+    .accordion-open span {
+    display:block;
+    position:absolute;
+    right:3px;
+    top:25%;
+    padding:10px;
+    }
+    .accordion-open span {
+    background:url('{{ 'minus.png' | asset_url }}') center center no-repeat;
+    }
+    .accordion-close span {
+    display:block;
+    position:absolute;
+    right:3px;
+    top:25%;
+    background:url('{{ 'plus.png' | asset_url }}') center center no-repeat;
+    padding:10px;
+    }
+    .faqpage div.container {
+    padding:0;
+    margin:0;
+    }
+    .faqpage div.container {
+    max-width:100%;
+    padding:5px 0;
+    }
+    .faqpage div.content {
+    background:#f0f0f0;
+    margin: 0;
+    padding:10px;
+    font-size:.9em;
+    line-height:1.5em;
+    }
+    .faqpage div.content ul {
+    padding:0;
+    margin:0;
+    padding:3px;
+    }
+    .faqpage div.content p {
+    padding:0;
+    margin:3px 0 10px;
+    padding:3px 0;
+    }
+    .faqpage div.content ul li {
+    list-style-position:inside;
+    line-height:25px;
+    }
+</style>
+
+<div class="accordion" id="section1"><h4>Freight and Delivery</h4><span></span></div>
+<div class="container">
+<div class="content">
+ <p>All hats are carefully packed in a special hatbox so they arrive in perfect condition. Depending on size and weight, orders over two hats may require separate packaging and freight.</p>
+
+  <p>Your purchase will be packed and dispatched within 3 working days of the order being placed.
+If your hat is made to order please allow one week from time of order to dispatch.
+  </p>
+  <h4>Australian Delivery</h4>
+  <p>Delivery is calculated according to the Australia Post standard shipping rate.</p>
+ 
+  <h4>International Delivery</h4>
+  <p>International freight is from AU$25 to $75, depending on the hat dimensions and destination.</p>
+  
+  	<p>Your purchase will be packed and dispatched within 3 working days of the order being placed. If your hat is made to order please allow one week from time of order to dispatch. </p>
+  <h4>Store Pick-up</h4>
+  <p>If you nominate to pick up in-store, please allow 7 working days from the time of order.We will contact you when your hat is ready for collection.</p>
+  </div>
+</div>
+<div class="accordion" id="section2"><h4>Returns and Exchanges</h4><span></span></div>
+<div class="container">
+<div class="content">
+  <p>Our returns policy applies for 14 days from the date of purchase. If more than 14 days have lapsed since your purchase we will not be able to offer you either refund or exchange. To be eligible for a return or exchange, your item must be unused and in the same condition that you received it. It must also be in the original hatbox as this box will protect the hat in transit.</p>
+<p>Only regular priced items may be refunded; unfortunately sale items cannot be refunded.</p>
+<p>It is important that you take accurate measurements and choose carefully before placing an order. If you need to exchange for a different size or style you will be responsible for paying shipping costs for returning your item, as well as the cost to us to return the new item to you. If you need to arrange for an exchange or return please email us at rosie@rosieboylan.com to discuss arrangements. We will reply by email, with instructions on the return, refund or exchange</p>
+<p>Once your returned item is received and inspected, we will send you a confirmation email. If a refund is approved, a credit will automatically be applied to your credit card or original method of payment. Shipping costs are non-refundable.</p>
+<p>Depending on stock we will endeavour to ship exchanged items within a week of receiving your return. The time it takes to arrive will vary, depending on where you live.</p>
+  
+</div>
+</div>
+<div class="accordion" id="section3"><h4>Hat Care</h4><span></span></div>
+<div class="container">
+<div class="content">
+  <h5>CARE OF YOUR NEW HAT</h5> 
+  <p>Keep the box your hat arrives in - to store the hat for longer periods - or keep your hat ready at hand on a hat stand. Remember that a hat dampened by rain or wearing over wet hair may lose its shape. A wet hat should be stuffed with paper, hand moulded to the correct shape and allowed to dry naturally. Special care should be taken to keep Toyo (paper braid) hats dry.</p>
+  <p>
+  Hats that have been slightly dented out of shape may be steamed using a shot from a steam iron or kettle, reshaped with the fingertips and left to dry. A flat brim may be lightly steam-ironed under a protective cloth to reshape if necessary. Hats may be freshened by brushing with a soft brush. Stains should be spot-cleaned with a damp cloth.</p>
+  <p>
+  Rosie Boylan’s hats are generally made from natural fibres that have natural variations in colour and texture and will develop an individual character as they mould to your head shape and become part of your own personality.</p>
+</div>
+</div>

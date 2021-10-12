@@ -1,0 +1,90 @@
+/* 
+
+ + + Rosieboy Theme Custom CSS 
+  
+*/
+
+@font-face {
+  font-family: RequiemFine;
+  font-style: normal;
+  font-weight: normal;
+  src: url("RequiemFine-HTF-SmallCaps.eot?#iefix") format("embedded-opentype"), url("RequiemFine-HTF-SmallCaps.woff2") format("woff2"), url("RequiemFine-HTF-SmallCaps.woff") format("woff"), url("RequiemFine-HTF-SmallCaps.ttf") format("truetype"), url("RequiemFine-HTF-SmallCaps.svg#RequiemFine") format("svg");
+}
+
+@font-face {
+  font-family: "Requiem Fine-HTF";
+  font-style: normal;
+  font-weight: normal;
+  src: url("RequiemFine-HTF-Roman.eot?#iefix") format("embedded-opentype"), url("RequiemFine-HTF-Roman.woff2") format("woff2"), url("RequiemFine-HTF-Roman.woff") format("woff"), url("RequiemFine-HTF-Roman.ttf") format("truetype"), url("RequiemFine-HTF-Roman.svg#Requiem Fine-HTF") format("svg");
+}
+
+/* 
+
+Fixes and overrides
+  
+  
+*/
+
+p.desc {
+  color: #9e9b97;
+}
+
+/* instagram style     snip  ------ */
+
+#instafeed a {
+  padding:3px;
+  margin:5px;
+  border:none;
+  display:inline-block;
+  position:relative;
+}
+
+#instafeed img { height:110px; width:110px; }
+
+#instafeed .rollover {
+  background:rgba(225, 225, 225, 0.3);
+  font-family: 'Open Sans Condensed', sans-serif;
+  font-size:27px;
+  position:absolute;
+  color:#ffffff;
+  right:7px;
+  top:7px;
+  left:7px;
+  bottom:7px;
+  opacity:0;
+  text-align:center;
+  line-height:110px;
+}
+
+#instafeed a:hover .rollover { opacity:1; }
+
+
+/* * * * Footer * * * * */
+
+.fatdiv {
+  margin-bottom: 18px;
+  border-bottom-color: rgb(230, 230, 230);
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  color: rgb(85, 85, 85);
+  display: block;
+  font-size: 14px;
+  line-height: 17px;
+  padding-bottom: 1.62em;
+  text-transform: uppercase;
+  }
+
+.fatdiv h4{
+  text-transform: uppercase;
+}
+
+a.phone{
+  color: rgb(146,146,146);
+}
+
+a.phone:hover {
+  color: #f79330;
+}
+
+
+
