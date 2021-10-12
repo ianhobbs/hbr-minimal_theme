@@ -29,7 +29,7 @@
   {% include 'fb-open-graph-tags' %}
   {% include 'twitter-cards' %}
   
-  {{ 'w3.css' | asset_url | stylesheet_tag }}
+  {% comment %} {{ 'w3.css' | asset_url | stylesheet_tag }} {% endcomment %}
   {{ 'styles.scss.css' | asset_url | stylesheet_tag }}
   {{ 'social/social-icons.css' | global_asset_url | stylesheet_tag }}
   {{ 'rosie-themes.css' | asset_url | stylesheet_tag }}
